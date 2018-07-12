@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+
+  <title>FST Token ICO</title>
+
+</head>
+
+<body>
+  <div class="container" style="width: 650px;">
+    <div class="row">
+      <div class="col">
+        <div class="row">
+          <div class="col">
+            <h1 class="text-center">FST TOKEN ICO SALE</h1>
+            <hr/>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div id="loader">
+              <p class="text-center">Loading...</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div id="content" class="text-center" style="display: none">
+              <p class="text-center">
+                Introducing "FST Token (FST) ! Token Price is
+                <span class="token-price"></span> Ether. You currently have
+                <span class="fst-balance"></span>&nbsp;FST Token
+              </p>
+              <br/>
+              <form onSubmit="App.buyTokens(); return false;" style="width: 100%">
+                <div id="message"></div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <input class="form-control" type="number" id="numberOfTokens" name="number" value="1" min="1" pattern="[0-9]" required />
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="submit">Buy Tokens</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <br/>
+              <div class="progress">
+                <div id="progress" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <p>
+                <span class="tokens-sold"></span> /
+                <span class="tokens-available"></span> tokens sold</p>
+              <hr>
+              <p id="accountAddress"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

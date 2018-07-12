@@ -34,6 +34,7 @@ contract FSTToken {
 
     function transfer(address _to, uint256 _value) public returns (bool) {
         require(balances[msg.sender] >= _value);
+        require(balances[_to] + _value > balances[_to]);
         
         balances[msg.sender] -= _value;
         balances[_to] += _value;
@@ -61,6 +62,7 @@ contract FSTToken {
         require(_to != msg.sender);
         require(balances[_from] >= _value);
         require(allowed[_from][msg.sender] >= _value);
+        require(balances[_to] + _value > balances[_to]);
         
         balances[_from] -= _value;
         balances[_to] += _value;
