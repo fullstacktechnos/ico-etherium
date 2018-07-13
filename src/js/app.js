@@ -23,7 +23,7 @@ var App = {
     } else {
       // set the provider you want from Web3.providers
       App.web3Provider = new Web3.providers.HttpProvider(
-        "http://localhost:8545"
+        "http://127.0.0.1:7545"
       );
       web3 = new Web3(App.web3Provider);
     }
@@ -94,10 +94,10 @@ var App = {
     $('#content').hide();
 
     // Get Account connceted to node
-    web3.eth.getAccounts(function(err, accounts) {
-      if (err === null) {
-        App.account = accounts[0];
-        $("#accountAddress").html("Your Account: " + App.account);
+    web3.eth.getCoinbase(function(err, account) {
+      if(err === null) {
+        App.account = account;
+        $('#accountAddress').html("Your Account: " + account);
       }
     })
 
